@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>过渡和动画  结束事件</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            /*transition: all 2s;*/
+            background: red;
+            animation: big 4s;
+        }
+        @keyframes big {
+            from{
+
+            }
+            to{
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        /*监听  transitionend  过渡结束事件*/
+        document.querySelector('div').addEventListener('transitionend',function(){
+           console.log('transitionend');
+        });
+
+        /*监听  animationend  动画结束事件*/
+        document.querySelector('div').addEventListener('animationend',function(){
+            console.log('animationend');
+        });
+
+
+    </script>
+</body>
+</html>
